@@ -2,7 +2,7 @@ import express from 'express'
 import Queue from './queue'
 
 const app = express()
-const port = process.argv.length > 2 ? Number(process.argv[2]) : 3000
+const port = Number(process.env.PORT || 3000)
 const queue = new Queue()
 
 function clearQueue() {
